@@ -320,7 +320,7 @@ async def hero(ctx, arg = None):
 		elif 75 < hero:
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
-	elif arg == 1:
+	elif arg == "1":
 		hero = random.randint(0, 28)
 		hero = heroes[hero]
 		emb = discord.Embed(title = heroes[hero], colour = discord.Color.from_rgb(48, 255, 165))
