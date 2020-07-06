@@ -78,7 +78,6 @@ heroes_1 = [
 71,
 49,
 48,
-33,
 46,
 40,
 44,
@@ -374,7 +373,7 @@ async def hero(ctx, arg = None):
 			await ctx.send(embed = emb)
 	elif arg == "1":
 		arg = int(arg)
-		hero = random.randint(0, 31)
+		hero = random.randint(0, 30)
 		hero_h = heroes_1[hero]
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
 		emb.set_image(url = heroes_image[hero_h])
