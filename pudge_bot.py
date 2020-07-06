@@ -307,18 +307,33 @@ answer_ball = [
 
 @bot.command()
 async def hero(ctx, arg = None):
-	hero = random.randint(0, 116)
-	emb = discord.Embed(title = heroes[hero], colour = discord.Color.from_rgb(48, 255, 165))
-	emb.set_image(url = heroes_image[hero])
-	if 0 <= hero <= 38:
-		emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
-		await ctx.send(embed = emb)
-	elif 38 <= hero <= 75:
-		emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
-		await ctx.send(embed = emb)
-	elif 75 < hero:
-		emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
-		await ctx.send(embed = emb)
+	if arg == None:
+		hero = random.randint(0, 116)
+		emb = discord.Embed(title = heroes[hero], colour = discord.Color.from_rgb(48, 255, 165))
+		emb.set_image(url = heroes_image[hero])
+		if 0 <= hero <= 38:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 38 <= hero <= 75:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 75 < hero:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
+			await ctx.send(embed = emb)
+	elif arg == 1:
+		hero = random.randint(0, 28)
+		hero = heroes[hero]
+		emb = discord.Embed(title = heroes[hero], colour = discord.Color.from_rgb(48, 255, 165))
+		emb.set_image(url = heroes_image[hero])
+		if 0 <= hero <= 38:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 38 <= hero <= 75:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 75 < hero:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
+			await ctx.send(embed = emb)
 
 @bot.command()
 async def flip(ctx):
