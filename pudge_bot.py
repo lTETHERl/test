@@ -52,7 +52,7 @@ async def ball(ctx, text = None):
 		await ctx.send(embed = emb)
 
 @bot.command()
-async def prediction(ctx):
+async def FortuneMeat(ctx):
 	p = random.randint(0, 9)
 	emb = discord.Embed( title = f"{ctx.author}, " +  predictions[p], colour = discord.Color.from_rgb(48, 255, 165))
 	await ctx.send(embed = emb)
