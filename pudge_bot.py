@@ -5,6 +5,38 @@ import random
 
 bot = commands.Bot(command_prefix='-')
 
+heroes_1 = [
+0,
+1,
+39,
+56,
+30,
+69,
+45,
+18,
+14,
+60,
+38,
+50,
+19,
+65,
+51,
+52,
+61,
+7,
+67,
+70,
+71,
+49,
+48,
+33,
+46,
+40,
+44,
+47,
+94
+]
+
 heroes_image = [
 "https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/2/26/Abaddon_icon.png/225px-Abaddon_icon.png?version=9c37a80286c2aaeec0a15fd34bf12c40",
 "https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/f/fe/Alchemist_icon.png/225px-Alchemist_icon.png?version=362ad1d92c189517ec2b15833387bf86",
@@ -274,7 +306,7 @@ answer_ball = [
 ]
 
 @bot.command()
-async def hero(ctx):
+async def hero(ctx, arg = None):
 	hero = random.randint(0, 116)
 	emb = discord.Embed(title = heroes[hero], colour = discord.Color.from_rgb(48, 255, 165))
 	emb.set_image(url = heroes_image[hero])
