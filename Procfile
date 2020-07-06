@@ -1,1 +1,1 @@
-worker: pudge_bot.py
+worker: python pudge_bot.py
