@@ -1,0 +1,1 @@
+worker: pudge_bot.py
