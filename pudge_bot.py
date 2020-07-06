@@ -389,7 +389,9 @@ async def hero(ctx, arg = None):
 	elif arg == "2":
 		arg = int(arg)
 		hero = random.randint(0, 45)
-		hero_h = heroes_1[hero]
+		print (hero)
+		hero_h = heroes_2[hero]
+		print (hero_h)
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
 		emb.set_image(url = heroes_image[hero_h])
 		if 0 <= hero_h <= 38:
