@@ -5,6 +5,55 @@ import random
 
 bot = commands.Bot(command_prefix='-')
 
+heroes_2 = [
+25,
+89,
+100,
+64,
+103,
+101,
+68,
+62,
+74,
+16,
+118,
+109,
+111,
+84,
+46,
+113,
+40,
+53,
+66,
+1,
+94,
+41,
+43,
+44,
+112,
+14,
+45,
+55,
+56,
+92,
+50,
+19,
+52,
+54,
+97,
+59,
+60,
+24,
+25,
+102,
+104,
+75,
+107,
+108,
+66,
+115
+]
+
 heroes_1 = [
 0,
 1,
@@ -34,7 +83,10 @@ heroes_1 = [
 40,
 44,
 47,
-94
+94,
+41,
+75,
+66
 ]
 
 heroes_image = [
@@ -321,17 +373,33 @@ async def hero(ctx, arg = None):
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
 	elif arg == "1":
-		hero = random.randint(0, 28)
-		hero = heroes[hero]
-		emb = discord.Embed(title = heroes[hero], colour = discord.Color.from_rgb(48, 255, 165))
-		emb.set_image(url = heroes_image[hero])
-		if 0 <= hero <= 38:
+		arg = int(arg)
+		hero = random.randint(0, 31)
+		hero_h = heroes_1[hero]
+		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
+		emb.set_image(url = heroes_image[hero_h])
+		if 0 <= hero_h <= 38:
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
 			await ctx.send(embed = emb)
-		elif 38 <= hero <= 75:
+		elif 38 <= hero_h <= 75:
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
 			await ctx.send(embed = emb)
-		elif 75 < hero:
+		elif 75 < hero_h:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
+			await ctx.send(embed = emb)
+	elif arg == "2":
+		arg = int(arg)
+		hero = random.randint(0, 45)
+		hero_h = heroes_1[hero]
+		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
+		emb.set_image(url = heroes_image[hero_h])
+		if 0 <= hero_h <= 38:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 38 <= hero_h <= 75:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 75 < hero_h:
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
 
