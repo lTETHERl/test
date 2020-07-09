@@ -456,7 +456,6 @@ async def hero(ctx, arg = None):
 			await ctx.send(embed = emb)
 
 	elif arg == "1":
-		arg = int(arg)
 		hero = random.randint(0, 30)
 		hero_h = heroes_1[hero]
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
@@ -472,7 +471,6 @@ async def hero(ctx, arg = None):
 			await ctx.send(embed = emb)
 
 	elif arg == "2":
-		arg = int(arg)
 		hero = random.randint(0, 45)
 		hero_h = heroes_2[hero]
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
@@ -488,7 +486,6 @@ async def hero(ctx, arg = None):
 			await ctx.send(embed = emb)
 
 	elif arg == "3":
-		arg = int(arg)
 		hero = random.randint(0, 31)
 		hero_h = heroes_3[hero]
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
@@ -504,7 +501,6 @@ async def hero(ctx, arg = None):
 			await ctx.send(embed = emb)
 
 	elif arg == "sup":
-		arg = int(arg)
 		hero = random.randint(0, 44)
 		hero_h = heroes_sup[hero]
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
