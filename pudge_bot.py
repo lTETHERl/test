@@ -5,6 +5,41 @@ import random
 
 bot = commands.Bot(command_prefix='-')
 
+heroes_3 = [
+6,
+5,
+81,
+21,
+36,
+31,
+8,
+59,
+32,
+37,
+27,
+3,
+4,
+78,
+0,
+9,
+2,
+22,
+20,
+13,
+97,
+33,
+25,
+17,
+10,
+96,
+16,
+14,
+7,
+38,
+30,
+18
+]
+
 heroes_2 = [
 25,
 89,
@@ -371,6 +406,7 @@ async def hero(ctx, arg = None):
 		elif 75 < hero:
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
+
 	elif arg == "1":
 		arg = int(arg)
 		hero = random.randint(0, 30)
@@ -386,11 +422,30 @@ async def hero(ctx, arg = None):
 		elif 75 < hero_h:
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
+
 	elif arg == "2":
 		arg = int(arg)
 		hero = random.randint(0, 45)
 		print (hero)
 		hero_h = heroes_2[hero]
+		print (hero_h)
+		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
+		emb.set_image(url = heroes_image[hero_h])
+		if 0 <= hero_h <= 38:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 38 <= hero_h <= 75:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 75 < hero_h:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
+			await ctx.send(embed = emb)
+
+		elif arg == "3":
+		arg = int(arg)
+		hero = random.randint(0, 31)
+		print (hero)
+		hero_h = heroes_3[hero]
 		print (hero_h)
 		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
 		emb.set_image(url = heroes_image[hero_h])
