@@ -5,6 +5,45 @@ import random
 
 bot = commands.Bot(command_prefix='-')
 
+heroes_5 = [
+85,
+117,
+95,
+99,
+83,
+106,
+76,
+80,
+114,
+116,
+105,
+77,
+90,
+72,
+93,
+98,
+104,
+91,
+23,
+88,
+15,
+107,
+34,
+28,
+102,
+94,
+11,
+25,
+79,
+24,
+54,
+110,
+86,
+115,
+87,
+118
+]
+
 heroes_4 = [
 29,
 11,
@@ -497,6 +536,24 @@ async def hero(ctx, arg = None):
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
 
+	elif arg == "5":
+		arg = int(arg)
+		hero = random.randint(0, 16)
+		print (hero)
+		hero_h = heroes_5[hero]
+		print (hero_h)
+		emb = discord.Embed(title = heroes[hero_h], colour = discord.Color.from_rgb(48, 255, 165))
+		emb.set_image(url = heroes_image[hero_h])
+		if 0 <= hero_h <= 38:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/7/7a/Strength_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 38 <= hero_h <= 75:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/2/2d/Agility_attribute_symbol.png")
+			await ctx.send(embed = emb)
+		elif 75 < hero_h:
+			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
+			await ctx.send(embed = emb)
+
 @bot.command()
 async def flip(ctx):
 	f = random.randint(1, 2)
@@ -534,7 +591,7 @@ async def pudge(ctx):
 	"3. -FortuneMeat(вызывает случайное предсказание) \n"
 	"4. -ball действие(показывает делать это действие или нет) \n"
 	"5. -flip(выпадает орёл или решка) \n"
-	"6. -hero(рандомный герой, можно написать 1, 2 или 3(роль)) \n"
+	"6. -hero(рандомный герой, можно написать 1, 2, 3, 4 или 5(роль)) \n"
 	"7. -pudge(показывает данный список) "
 	)
 
