@@ -441,7 +441,7 @@ async def hero(ctx, arg = None):
 			emb.set_thumbnail(url = "https://gamepedia.cursecdn.com/dota2_gamepedia/5/56/Intelligence_attribute_symbol.png")
 			await ctx.send(embed = emb)
 
-		elif arg == "3":
+	elif arg == "3":
 		arg = int(arg)
 		hero = random.randint(0, 31)
 		print (hero)
