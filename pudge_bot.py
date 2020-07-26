@@ -592,4 +592,4 @@ async def roll(ctx, arg1 = None, arg2 = None):
 	await ctx.send(str(otvet))
 
 
-bot.run('NzI5NDYxOTM1OTk2Nzk3MDI5.XwJSrw.vdgFAcFTUjE5Guo-6VdnWtFKL48')
+bot.run('NzI5NDYxOTM1OTk2Nzk3MDI5.XwJSXg.6qqVbF7csuNX-dFBwp0qMlofJtc')
